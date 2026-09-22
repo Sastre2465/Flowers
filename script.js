@@ -27,11 +27,6 @@ function entrarAlJardin() {
   activarMusica();
 }
 
-const yaEntro = localStorage.getItem('jardin-acceso') === 'andrea';
-if (yaEntro) {
-  entrarAlJardin();
-}
-
 gateForm.addEventListener('submit', (evento) => {
   evento.preventDefault();
   const nombre = gateInput.value;
@@ -44,7 +39,6 @@ gateForm.addEventListener('submit', (evento) => {
     return;
   }
 
-  localStorage.setItem('jardin-acceso', 'andrea');
   entrarAlJardin();
 });
 
